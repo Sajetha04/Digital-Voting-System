@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Voting System</title>
+</head>
+<style>
+    body{
+    background-image: url('miniimg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+    padding: 10px;
+}
+ h1{
+    font-family: rockwell;
+    color: white;
+}
+log{
+    margin-right: 20px;
+}
+reg{
+    margin-right: 10px;
+}
+input{
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+dropdown{
+    padding: 5px;
+    border-radius: 5px;
+    width: 7%;
+}
+button{
+    padding: 5px;
+    border-radius: 5px;
+    width: 5%;
+    background-color: lightgreen;
+    color: blue;
+}
+borderrole{
+    border: 2px solid white;
+    padding: 13px;
+    border-radius: 5px;
+    width: 15%;
+    text-align: left;
+}
+borderrole select{
+    padding: 10px;
+    border-radius: 5px;
+    width:55%;
+}
+</style>
+<body>
+    <center>
+    <div id="header">
+        <h1>Digital Voting System</h1>
+    </div><hr>
+    <div id="body">
+        <form name="myform" action="vote.html" onsubmit="return disp()">
+            <h2 id="log">Login</h2><br>
+            <input type="tel" name="mobile" placeholder="Enter mobile number" ><br><br><br>
+            <input type="password" name="password" placeholder="Enter password" ><br><br><br>
+            <div id="borderrole">
+            Select role: <select name="role" id="dropdown">
+                <option value="1">Voter</option>
+                <option value="2">Group</option>
+            </select></div><br><br>
+              <button>Login</button>
+            <br><br>
+            Don't have an user account? <a href="minireg.html" style="color: white;">Register</a> here
+<script>
+function disp()
+{
+let b=document.forms["myform"]["mobile"].value;
+let c=document.forms["myform"]["password"].value;
+if(b.length!=10)
+{
+alert("Phone number must be 10 digits");
+return false;
+}
+var mob=/^[1-9]{1}[0-9]{9}$/;
+if(mob.test(b)==false)
+{
+alert("Please enter valid mobile number.");
+return false;
+}
+if(c.length<8)
+{
+alert("Password must atleast be 8 characters");
+return false;
+}
+}
+</script>
+</form
+</div>
+</center>
+</body>    
+</html>

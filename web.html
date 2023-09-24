@@ -1,0 +1,234 @@
+<html>
+<head>
+    <title>Digital Voting System</title>
+</head>
+<h1 style="background-color:black;color:white;font-size:50px;"><b><center>DIGITAL VOTING SYSTEM</center></b></h1>
+<style>
+body
+{
+background-color:antiquewhite;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.float-img
+{
+float:left;
+margin-right:10px;
+margin-bottom:5px;
+border:solid black 1px;
+padding:2px;
+}
+{
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+}
+
+.mySlides {
+  display: none;
+}
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 10%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+<div class="container">
+
+  
+  <div class="mySlides">
+    <div class="numbertext">1 / 3</div>
+      <img src="bg2.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 3</div>
+      <img src="bg.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 3</div>
+     <a href="minireg.html">
+      <img src="bg1.png" style="width:100%">
+     </a>
+  </div>
+
+   
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+ 
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="bg2.png" style="width:80px;" onclick="currentSlide(1)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="bg.png" style="width:80px" onclick="currentSlide(2)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="bg1.png" style="width:80px" onclick="currentSlide(3)">
+    </div>
+</div>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<h2 style="background-color:black;color:white;font-size:25px;"><center>ABOUT eVOTE</center></h2>
+<img src="evote.jpg" width="400px" height="400px" class="float-img"/>
+<p style="font-size:27px;">eVote is an election system that facilitates voters to record their secure and secret ballot electronically. 
+It has a friendly user interface and enables voters to cast their votes in few simple steps. 
+We ensures the authenticity of the voters and the votes cast by them along with non-traceability of the casted vote. eVote's robust architecture has persistently manifested 
+to be one of the most reliable, comprehensible and economical electronic voting solution.It renders Simple and Accessible voter experience that eventually increases voter 
+engagement and turnout. Auditable, Easy To Use, Secure and Reliable is what sets eVote apart from its competitors.eVote has facilitated several organizations, across a 
+wide range of industries to conduct hassle-free electronic voting with utmost security and integrity. Some of our fortes include outstanding and prompt customer support, 
+highly secure and trustworthy elections and last but not the least; our potential to be able to tabulate expeditious and accurate results.We’d welcome the opportunity to work 
+with you to provide exceptional and unparalleled service and add you to our ever-growing list of satisfied clients.
+</p>
+<h3 style="background-color:black;color:white;font-size:25px;"><b><center>FEATURES</center></b></h3>
+<table width="100%">
+<tr>
+<th><img src="domain.png" width="30px" height="30px"></th>
+<th><img src="compat.png" width="30px" height="30px"></th>
+<th><img src="custom.png" width="30px" height="30px"></th>
+<th><img src="candidate.png" width="30px" height="30px"></th>
+<th><img src="mob.png" width="30px" height="30px"></th>
+<th><img src="privacy.png" width="30px" height="30px"></th>
+<th><img src="staff.png" width="30px" height="30px"></th>
+<th><img src="automated.png" width="30px" height="30px"></th>
+<th><img src="result.png" width="30px" height="30px"></th>
+<th><img src="econ.png" width="30px" height="30px"></th>
+</tr>
+<tr>
+<td>Dedicated Voting website</td>
+<td>Compatible with any device</td>
+<td>Customization</td>
+<td>Candidate Information</td>
+<td>Mobile Application</td>
+<td>Voter's Privacy and Integrity</td>
+<td>Resolute Support Staff</td>
+<td>Increased Voter turnout</td>
+<td>Automated system</td>
+<td>Share and publish a result</td>
+</tr>
+</table>
+<h4 style="background-color:black;color:white;font-size:25px;"><b><center>HOW IT WORKS</center></b></h4>
+<center>
+<table>
+<tr>
+<th><img src="registration.png" width="40px" height="40px"></th>
+<th>REGISTRATION</th>
+</tr>
+<tr>
+<td><img src="login.png" width="40px" height="40px"></td>
+<td>LOGIN</td>
+</tr>
+<tr>
+<td><img src="vote.png" width="40px" height="40px"></td>
+<td>VOTE</td>
+</tr>
+</table>
+</center>
+<h5 style="background-color:black;color:white;font-size:25px;"><b><center>CONTACT US</center></b></h5>
+<center>
+<h1 style="font-size:25px";><center>702,7th Floor,ECSTASY,Business Center at Citi of Joy,J.S.D.Road,Perambur,Chennai-600039</center></h1>
+<table>
+<tr>
+<th><img src="ring.png" width="30px" height="30px"></th>
+<th>9786432568</th>
+</tr>
+</table>
+</center>
+</body>
+</html>
+

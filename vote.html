@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Voting System - VOTING</title>
+</head>
+<style>
+body{
+    background-image: url('miniimg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+{
+    padding: 10px;
+}
+{
+    font-family: rockwell;
+    color: white;
+}
+{
+    margin-right: 20px;
+}
+{
+    margin-right: 10px;
+}
+input{
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-left: 10px;
+   }
+{
+    padding: 5px;
+    border-radius: 5px;
+    width: 7%;
+}
+button{
+    padding: 5px;
+    border-radius: 5px;
+    width: 5%;
+    background-color: lightgreen;
+    color: blue;
+}
+{
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 30.5%;
+}
+{
+    padding: 10px;
+    border-radius: 5px;
+    width:30%;
+}
+{
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 30.5%;
+}
+p{
+     display:inline;
+}
+</style>
+<body>
+    <center>
+    <div id="header">
+        <h1>Digital Voting System</h1>
+    </div><hr>
+    <div id="body">
+    <form name="myform" action="sql1.php" method="POST" onsubmit="return validate()">
+    <h2 id="reg">VOTING</h2><br>
+     <input type="text"  id="name" name="nam" placeholder="Enter your name"><br>
+     <h1><center>VOTE FOR:</center></h1><br><br><br>
+     <input type="radio" id="vote" name="votefor" value="ADMK">
+     <img src="admk.jpeg"width="50"height="50">&ensp;
+     <p style="font-size:30px;color:black;">ADMK</p>
+     <input type="radio" id="vote" name="votefor" value="DMK">
+     <img src="dmk.jpeg"width="50"height="50">&ensp;
+     <p style="font-size:30px;color:black;">DMK</p>
+     <input type="radio" id="vote" name="votefor" value="BJP">
+     <img src="bjp.jpeg"width="50"height="50">&ensp;
+     <p style="font-size:30px;color:black;">BJP</p>
+     <input type="radio" id="vote" name="votefor" value="INC">
+     <img src="inc.jpeg"width="50"height="50">&ensp;
+     <p style="font-size:30px;color:black;">INC</p>
+     <input type="radio" id="vote" name="votefor" value="PMK">
+     <img src="pmk.jpeg"width="50"height="50">&ensp;
+     <p style="font-size:30px;color:black;">PMK</p>
+     <input type="radio" id="vote" name="votefor" value="MNM">
+     <img src="mnm.jpeg"width="50"height="50">&ensp;
+     <p style="font-size:30px;color:black;">MNM</p>
+     <input type="radio" id="vote" name="votefor" value="NOTA">
+     <img src="notaa.png"width="50"height="50">&ensp;
+     <p style="font-size:30px;color:black;">NOTA</p><br><br><br>
+     <center><input type="submit" value="SUBMIT"></center>
+     <a  href="display.php" style="float:right;">RETRIEVAL</a>
+     <script>
+function validate()
+{
+let a=document.forms["myform"]["name"].value;
+if(a=="")
+{
+alert("Enter your name");
+return false;
+}
+}
+</script>
+</form>
+</html>
+
+
+     
+     
+
+
+
+

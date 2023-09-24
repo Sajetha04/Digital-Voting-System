@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Voting System - Registration</title>
+</head>
+<style>
+body{
+    background-image: url('miniimg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+{
+    padding: 10px;
+}
+{
+    font-family: rockwell;
+    color: white;
+}
+{
+    margin-right: 20px;
+}
+{
+    margin-right: 10px;
+}
+input{
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+{
+    padding: 5px;
+    border-radius: 5px;
+    width: 7%;
+}
+button{
+    padding: 5px;
+    border-radius: 5px;
+    width: 5%;
+    background-color: lightgreen;
+    color: blue;
+}
+{
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 30.5%;
+}
+{
+    padding: 10px;
+    border-radius: 5px;
+    width:30%;
+}
+{
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 30.5%;
+}
+</style>
+<body>
+    <center>
+    <div id="header">
+        <h1>Digital Voting System</h1>
+    </div><hr>
+    <div id="body">
+    <form name="myform" action="minilog.html" onsubmit="return validate()">
+    <h2 id="reg">Registration</h2><br>
+    <tr><th><input type="text" name="name" placeholder="Enter name" ></th><th>
+    <input type="tel" name="mobile" placeholder="Enter mobile number" ></th></tr><br><br><br>
+    <tr><th><input type="password" name="password" placeholder="Enter password"></th><th>
+    <input type="password" name="cfpassword" placeholder="Enter confirm password" ></th></tr><br><br><br>
+    <input type="textarea" name="address" placeholder="Enter address" style="width: 20%;"><br><br>
+    <div id="bordering">
+    Upload image:<input type="file" name="photo">
+    </div><br>
+    <div id="borderrole">
+    Select role: <select name="role" id="dropdown">
+        <option value="1">Voter</option>
+        <option value="2">Group</option>
+    </select></div><br>
+         <button>SUBMIT</button>
+<script>
+function validate()
+{
+let a=document.forms["myform"]["name"].value;
+let b=document.forms["myform"]["mobile"].value;
+let c=document.forms["myform"]["password"].value;
+let d=document.forms["myform"]["cfpassword"].value;
+if(a=="")
+{
+alert("Enter your name");
+return false;
+}
+if(b.length!=10)
+{
+alert("Phone number must be 10 digits");
+return false;
+}
+var mob=/^[1-9]{1}[0-9]{9}$/;
+if(mob.test(b)==false)
+{
+alert("Please enter valid mobile number.");
+return false;
+}
+if(c.length<8)
+{
+alert("Password must atleast be 8 characters");
+return false;
+}
+if(c!=d)
+{
+alert("Password should be same");
+return false;
+}
+}
+</script>
+</form>
+</div>  
+</center>
+</body>
+</html>
